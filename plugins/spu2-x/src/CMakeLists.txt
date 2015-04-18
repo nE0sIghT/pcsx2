@@ -15,10 +15,6 @@ endif()
 # plugin name
 set(Output spu2x-2.0.0)
 
-set(OptimizationFlags
-    -O2
-    )
-
 if(CMAKE_BUILD_TYPE STREQUAL Debug)
     set(spu2xFinalFlags "")
 

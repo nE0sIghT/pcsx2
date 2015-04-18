@@ -17,10 +17,6 @@ set(CommonFlags
     -DNVIDIA_CG_API
     )
 
-set(OptimizationFlags
-    -O2
-    )
-
 if(CMAKE_BUILD_TYPE STREQUAL Debug)
     set(zerogsshadersFinalFlags
         ${CommonFlags} -D_DEBUG

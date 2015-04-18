@@ -7,11 +7,6 @@ set(CommonFlags
     -D_LARGEFILE64_SOURCE
     )
 
-set(OptimizationFlags
-    -O2
-    -fomit-frame-pointer
-    )
-
 if(CMAKE_BUILD_TYPE STREQUAL Debug)
     set(CDVDlinuzFinalFlags ${CommonFlags})
 

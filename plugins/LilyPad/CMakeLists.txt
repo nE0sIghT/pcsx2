@@ -9,10 +9,6 @@ endif()
 # plugin name
 set(Output LilyPad-0.11.0)
 
-set(OptimizationFlags
-    -O2
-    )
-
 if(CMAKE_BUILD_TYPE STREQUAL Debug)
     set(lilypadFinalFlags "-DPCSX2_DEBUG")
 

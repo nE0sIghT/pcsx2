@@ -12,8 +12,6 @@ set(CommonFlags
 	-fno-strict-aliasing
     )
 
-set(OptimizationFlags -O2)
-
 #Clang doesn't support a few common flags that GCC does.
 if(NOT USE_CLANG)
 	set(UtilitiesFinalFlags

@@ -26,8 +26,6 @@ set(CommonFlags
     -DWX_PRECOMP
 	)
 
-set(OptimizationFlags -O2)
-
 #Clang doesn't support a few common flags that GCC does.
 if(NOT USE_CLANG)
 	set(pcsx2FinalFlags ${CommonFlags} -fno-guess-branch-probability -fno-dse -fno-tree-dse)

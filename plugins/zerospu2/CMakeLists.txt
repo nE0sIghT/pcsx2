@@ -9,10 +9,6 @@ endif()
 # plugin name
 set(Output zerospu2)
 
-set(OptimizationFlags
-    -O2
-    )
-
 if(CMAKE_BUILD_TYPE STREQUAL Debug)
     set(zerospu2FinalFlags "")
 

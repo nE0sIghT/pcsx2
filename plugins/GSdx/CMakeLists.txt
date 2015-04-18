@@ -18,9 +18,6 @@ set(CommonFlags
     -Wunused-variable # __dummy variable need to be investigated
     )
 
-set(OptimizationFlags -O2)
-
-
 if(CMAKE_BUILD_TYPE STREQUAL Debug)
     set(GSdxFinalFlags ${GSdxFinalFlags} ${CommonFlags} -D_DEBUG)
 
