@@ -9,10 +9,6 @@ endif()
 # plugin name
 set(Output onepad-1.1.0)
 
-set(OptimizationFlags
-    -O2
-    )
-
 if(CMAKE_BUILD_TYPE STREQUAL Debug)
     set(onepadFinalFlags "")
 

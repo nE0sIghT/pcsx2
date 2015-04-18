@@ -9,10 +9,6 @@ endif()
 # plugin name
 set(Output CDVDiso)
 
-set(OptimizationFlags
-    -O2
-    )
-
 if(CMAKE_BUILD_TYPE STREQUAL Debug)
     set(CDVDisoFinalFlags "")
 

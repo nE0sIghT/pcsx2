@@ -65,8 +65,8 @@ endif(CMAKE_BUILD_TYPE STREQUAL Devel)
 
 # Release - Build
 if(CMAKE_BUILD_TYPE STREQUAL Release)
-	set(CMAKE_C_FLAGS_RELEASE "-Wall -fPIC -m32 -O2 -s")
-	set(CMAKE_CXX_FLAGS_RELEASE "-Wall -fPIC -m32 -O2 -s")
+	set(CMAKE_C_FLAGS_RELEASE "-Wall -fPIC -m32 -s")
+	set(CMAKE_CXX_FLAGS_RELEASE "-Wall -fPIC -m32 -s")
 	
 	# add defines
 	add_definitions()

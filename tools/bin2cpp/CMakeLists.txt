@@ -23,7 +23,7 @@ endif(CMAKE_BUILD_TYPE STREQUAL Devel)
 if(CMAKE_BUILD_TYPE STREQUAL Release)
 	# add defines
 	set(bin2cppFinalFlags
-		-O2 -s -Wall -fexceptions
+		-s -Wall -fexceptions
 	)
 endif(CMAKE_BUILD_TYPE STREQUAL Release)
 

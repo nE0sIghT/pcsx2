@@ -7,10 +7,6 @@ set(CommonFlags
     -Wall
     )
 
-set(OptimizationFlags
-    -O2
-    )
-
 # Debug - Build
 if(CMAKE_BUILD_TYPE STREQUAL Debug)
 	# add defines
