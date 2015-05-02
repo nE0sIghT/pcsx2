@@ -197,6 +197,10 @@ using namespace std;
 	#include <GL/glext.h>
 	#include "GLLoader.h"
 
+	#ifndef PFNGLBLENDCOLORPROC
+		typedef void (APIENTRYP PFNGLBLENDCOLORPROC) (GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha);
+	#endif
+
 	//using namespace __gnu_cxx;
 
 	#define DIRECTORY_SEPARATOR '/'
