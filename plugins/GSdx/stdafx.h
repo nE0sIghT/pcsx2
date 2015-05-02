@@ -185,6 +185,9 @@ using namespace std;
 	// Note use GL/glcorearb.h on the future
 	#include <GL/gl.h>
 	#include <GL/glext.h>
+	#ifndef PFNGLBLENDCOLORPROC
+		typedef void (APIENTRYP PFNGLBLENDCOLORPROC) (GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha);
+	#endif
 #endif
 	#include "GLLoader.h"
 
