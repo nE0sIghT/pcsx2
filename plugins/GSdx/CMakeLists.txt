@@ -38,8 +38,8 @@ if(XDG_STD)
     set(GSdxFinalFlags ${GSdxFinalFlags} -DXDG_STD)
 endif()
 
-if(GLES_API AND GLESV2_FOUND)
-    set(GSdxFinalFlags ${GSdxFinalFlags} -DENABLE_GLES)
+if(EGL_API AND EGL_FOUND)
+    set(GSdxFinalFlags ${GSdxFinalFlags} -DEGL_SUPPORTED)
 endif()
 
 #Clang doesn't support a few common flags that GCC does.
@@ -198,24 +198,17 @@ set(GSdxFinalLibs
     ${X11_LIBRARIES}
 )
 
-if(GLES_API AND GLESV2_FOUND)
-    set(GSdxFinalLibs
-        ${GSdxFinalLibs}
-        ${GLESV2_LIBRARIES}
-    )
-else()
-    set(GSdxFinalLibs
-        ${GSdxFinalLibs}
-        ${OPENGL_LIBRARIES}
-    )
-endif()
-
-set(GSdxFinalLibs
-    ${GSdxFinalLibs}
-    ${EGL_LIBRARIES}
+set(GSdxFinalLibs ${GSdxFinalLibs}
+	${OPENGL_LIBRARIES}
     ${GTK2_LIBRARIES}
     ${LIBC_LIBRARIES}
 )
+
+if(EGL_API AND EGL_FOUND)
+    set(GSdxFinalLibs ${GSdxFinalLibs}
+        ${EGL_LIBRARIES}
+        )
+endif()
 
 # Generate Glsl header file. Protect with REBUILD_SHADER to avoid build-dependency on PERL
 if (REBUILD_SHADER)
