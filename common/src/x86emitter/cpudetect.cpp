@@ -16,6 +16,9 @@
 #include "PrecompiledHeader.h"
 #include "cpudetect_internal.h"
 #include "internal.h"
+#if defined(__GNUC__)
+#include "x86intrin.h"
+#endif
 
 using namespace x86Emitter;
 
